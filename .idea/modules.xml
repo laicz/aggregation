@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/aggregation.iml" filepath="$PROJECT_DIR$/aggregation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-jar-demo/spring-boot-jar-demo.iml" filepath="$PROJECT_DIR$/spring-boot-jar-demo/spring-boot-jar-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-war-demo/spring-boot-war-demo.iml" filepath="$PROJECT_DIR$/spring-boot-war-demo/spring-boot-war-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zz/zz.iml" filepath="$PROJECT_DIR$/zz/zz.iml" />
+      <module fileurl="file://F:/gittest/zz/zz.iml" filepath="F:/gittest/zz/zz.iml" />
+    </modules>
+  </component>
+</project>

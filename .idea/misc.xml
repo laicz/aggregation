@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/spring-boot-synthesize" />
     <file type="web" url="file://F:/gittest/zz" />
   </component>
   <component name="MavenProjectsManager">
@@ -11,6 +12,7 @@
         <option value="$PROJECT_DIR$/spring-boot-war-demo/pom.xml" />
         <option value="$PROJECT_DIR$/zz/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-synthesize/pom.xml" />
       </list>
     </option>
   </component>

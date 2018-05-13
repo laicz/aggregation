@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="spring-boot-synthesize:war">
+    <output-path>$PROJECT_DIR$/spring-boot-synthesize/target</output-path>
+    <root id="archive" name="spring-boot-synthesize-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="spring-boot-synthesize:war exploded" />
+    </root>
+  </artifact>
+</component>

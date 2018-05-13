@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/aggregation.iml" filepath="$PROJECT_DIR$/aggregation.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-jar-demo/spring-boot-jar-demo.iml" filepath="$PROJECT_DIR$/spring-boot-jar-demo/spring-boot-jar-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-jpa/spring-boot-jpa.iml" filepath="$PROJECT_DIR$/spring-boot-jpa/spring-boot-jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-synthesize/spring-boot-synthesize.iml" filepath="$PROJECT_DIR$/spring-boot-synthesize/spring-boot-synthesize.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-war-demo/spring-boot-war-demo.iml" filepath="$PROJECT_DIR$/spring-boot-war-demo/spring-boot-war-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/zz/zz.iml" filepath="$PROJECT_DIR$/zz/zz.iml" />
     </modules>

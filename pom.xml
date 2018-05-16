@@ -6,6 +6,10 @@
 
     <groupId>com.zhou</groupId>
     <artifactId>aggregation</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>mongo-java</module>
+    </modules>
 
 </project>

@@ -1,0 +1,11 @@
+spring:
+    data:
+      mongodb:
+        uri: mongodb://127.0.0.1:27017/action
+    datasource:
+      url: jdbc:mysql://localhost:3306/test
+      username: root
+      password: 12345
+      #schema: database/import.sql
+      #sql-script-encoding: utf-8
+      driver-class-name: com.mysql.jdbc.Driver

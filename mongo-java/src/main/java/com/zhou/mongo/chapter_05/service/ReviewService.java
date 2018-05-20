@@ -4,6 +4,7 @@
  */
 package com.zhou.mongo.chapter_05.service;
 
+import com.alibaba.fastjson.JSONArray;
 import com.zhou.mongo.model.Review;
 
 import java.util.List;
@@ -16,4 +17,6 @@ public interface ReviewService {
     List<Review> saveAll(List<Review> reviews);
 
     List<Review> findReviewByProductId(String productId);
+
+    JSONArray findAllProductReviewCount();
 }

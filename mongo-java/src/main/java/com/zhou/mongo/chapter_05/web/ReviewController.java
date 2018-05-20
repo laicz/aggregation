@@ -4,6 +4,7 @@
  */
 package com.zhou.mongo.chapter_05.web;
 
+import com.alibaba.fastjson.JSONArray;
 import com.zhou.mongo.chapter_05.service.ReviewService;
 import com.zhou.mongo.model.Review;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,5 +29,14 @@ public class ReviewController {
     @RequestMapping(value = "/getPreviewByProductId")
     public List<Review> getReviewByProductId(@RequestParam("productId")String productId){
         return reviewService.findReviewByProductId(productId);
+    }
+
+    /**
+     * 获取所有的商品机评论数
+     * @return
+     */
+    @RequestMapping(value = "/findAllProductReviewCount")
+    public JSONArray findAllProductReviewCount(){
+        return reviewService.findAllProductReviewCount();
     }
 }

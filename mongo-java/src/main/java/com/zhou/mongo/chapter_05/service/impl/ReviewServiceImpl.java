@@ -4,7 +4,9 @@
  */
 package com.zhou.mongo.chapter_05.service.impl;
 
+import com.alibaba.fastjson.JSONArray;
 import com.sun.org.apache.regexp.internal.RE;
+import com.zhou.mongo.chapter_05.dao.ReviewMBDao;
 import com.zhou.mongo.chapter_05.repository.ReviewMBRepository;
 import com.zhou.mongo.chapter_05.service.ReviewService;
 import com.zhou.mongo.model.Review;
@@ -23,6 +25,9 @@ public class ReviewServiceImpl implements ReviewService {
     @Autowired
     private ReviewMBRepository reviewMBRepository;
 
+    @Autowired
+    private ReviewMBDao reviewMBDao;
+
     @Override
     public List<Review> saveAll(List<Review> reviews) {
         return reviewMBRepository.saveAll(reviews);
@@ -31,5 +36,10 @@ public class ReviewServiceImpl implements ReviewService {
     @Override
     public List<Review> findReviewByProductId(String productId){
         return  reviewMBRepository.findReviewByProductId(productId);
+    }
+
+    @Override
+    public JSONArray findAllProductReviewCount(){
+        return reviewMBDao.findAllProductReviewCount();
     }
 }

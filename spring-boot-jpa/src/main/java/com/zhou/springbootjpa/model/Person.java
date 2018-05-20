@@ -8,7 +8,6 @@ package com.zhou.springbootjpa.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
 
 
 @Entity     //表明这是一个和数据库映射的实体类

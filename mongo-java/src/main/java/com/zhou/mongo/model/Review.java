@@ -7,6 +7,8 @@ package com.zhou.mongo.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 /**
  * 商品评价
  * 2018/5/19  21:32
@@ -17,7 +19,7 @@ public class Review {
     @Id
     private String id;
     private String product_id;
-    private String date;
+    private Date date;
     private String title;
     private String text;
     private Long rating;
@@ -42,11 +44,11 @@ public class Review {
         this.product_id = product_id;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

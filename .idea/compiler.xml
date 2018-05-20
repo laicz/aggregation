@@ -17,7 +17,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="aggregation" target="1.5" />
-      <module name="mongo-java" target="1.5" />
+      <module name="mongo-java" target="1.8" />
       <module name="mongodb-action-java" target="1.5" />
       <module name="spring-boot-jar-demo" target="1.8" />
       <module name="spring-boot-jpa" target="1.8" />

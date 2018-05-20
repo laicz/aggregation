@@ -4,15 +4,6 @@
  */
 package com.zhou.springbootjpa.repository;
 
-import com.zhou.springbootjpa.repository.base.CustomRepository;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.repository.support.JpaEntityInformation;
-import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
-
-import javax.persistence.EntityManager;
-import java.io.Serializable;
-
 /**
  * 2018/5/10  22:37
  * created by zhoumb

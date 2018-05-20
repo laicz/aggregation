@@ -24,7 +24,7 @@ public class Product {
     private Long total_reviews;//评价总数
     private Double average_review;//评价平均分
     private ProductPrice pricing;//价格：包含定价和折后价
-    private PriceHistory price_histoty;//历史价格
+    private PriceHistory[] price_histoty;//历史价格
     private String primary_category;//主要分类
     private String[] category_ids;
     private String main_cat_id;//主要类别
@@ -102,11 +102,11 @@ public class Product {
         this.pricing = pricing;
     }
 
-    public PriceHistory getPrice_histoty() {
+    public PriceHistory[] getPrice_histoty() {
         return price_histoty;
     }
 
-    public void setPrice_histoty(PriceHistory price_histoty) {
+    public void setPrice_histoty(PriceHistory[] price_histoty) {
         this.price_histoty = price_histoty;
     }
 

@@ -5,7 +5,6 @@
 package com.zhou.springbootsynthesize.sys.model;
 
 import com.zhou.springbootsynthesize.common.model.BaseEntity;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * 2018/5/11  23:15

@@ -7,6 +7,8 @@ package com.zhou.springbootsynthesize.mongodb.model;
 import com.zhou.springbootsynthesize.common.model.BaseEntity;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 /**
  * 2018/5/13  11:24
  * created by zhoumb
@@ -18,16 +20,27 @@ public class Person extends BaseEntity{
     private String email;
     private String country;
     private String[] book;
+    private Date createTime;
+
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
 
     public Person() {
     }
 
-    public Person(String name, Integer age, String email, String country, String[] book) {
+    public Person(String name, Integer age, String email, String country, String[] book,Date createTime) {
         this.name = name;
         this.age = age;
         this.email = email;
         this.country = country;
         this.book = book;
+        this.createTime = createTime;
     }
 
     public String getName() {

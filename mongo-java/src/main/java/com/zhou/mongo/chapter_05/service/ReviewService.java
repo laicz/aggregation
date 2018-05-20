@@ -14,4 +14,6 @@ import java.util.List;
  */
 public interface ReviewService {
     List<Review> saveAll(List<Review> reviews);
+
+    List<Review> findReviewByProductId(String productId);
 }

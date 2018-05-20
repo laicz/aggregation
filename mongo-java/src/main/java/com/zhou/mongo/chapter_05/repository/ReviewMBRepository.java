@@ -6,6 +6,9 @@ package com.zhou.mongo.chapter_05.repository;
 
 import com.zhou.mongo.model.Review;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
+
+import java.util.List;
 
 /**
  * 2018/5/19  23:41
@@ -13,4 +16,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  */
 public interface ReviewMBRepository extends MongoRepository<Review,String>{
 
+    @Query("{'product_id':?0}")
+    List<Review> findReviewByProductId(String productId);
 }

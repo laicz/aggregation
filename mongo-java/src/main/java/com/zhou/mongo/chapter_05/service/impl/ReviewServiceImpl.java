@@ -23,7 +23,13 @@ public class ReviewServiceImpl implements ReviewService {
     @Autowired
     private ReviewMBRepository reviewMBRepository;
 
+    @Override
     public List<Review> saveAll(List<Review> reviews) {
         return reviewMBRepository.saveAll(reviews);
+    }
+
+    @Override
+    public List<Review> findReviewByProductId(String productId){
+        return  reviewMBRepository.findReviewByProductId(productId);
     }
 }

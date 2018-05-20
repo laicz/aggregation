@@ -10,6 +10,7 @@ import com.zhou.mongo.chapter_05.dao.ReviewMBDao;
 import com.zhou.mongo.chapter_05.repository.ReviewMBRepository;
 import com.zhou.mongo.chapter_05.service.ReviewService;
 import com.zhou.mongo.model.Review;
+import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -41,5 +42,10 @@ public class ReviewServiceImpl implements ReviewService {
     @Override
     public JSONArray findAllProductReviewCount(){
         return reviewMBDao.findAllProductReviewCount();
+    }
+
+    @Override
+    public Document getReviewCountByProductId(String productId) {
+        return reviewMBDao.getReviewCountByProductId(productId);
     }
 }

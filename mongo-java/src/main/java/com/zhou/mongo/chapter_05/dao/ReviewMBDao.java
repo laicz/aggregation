@@ -41,21 +41,38 @@ public class ReviewMBDao {
                 jsonArray.add(jsonObject);
             }
         }
-        System.out.println(String.format("共获取到%d组评论",jsonArray.size()));
+        System.out.println(String.format("共获取到%d组评论", jsonArray.size()));
         return jsonArray;
     }
 
     /**
      * 获取某一个商品的评价数量
+     *
      * @param productId
      * @return
      */
     public Document getReviewCountByProductId(String productId) {
-        Aggregation aggregation = Aggregation.newAggregation(Aggregation.match(Criteria.where("product_id").is(productId)),Aggregation.group("product_id").count().as("评价数量"));
+        Aggregation aggregation = Aggregation.newAggregation(Aggregation.match(Criteria.where("product_id").is(productId)), Aggregation.group("product_id").count().as("评价数量"));
+        AggregationResults<Document> review = mongoTemplate.aggregate(aggregation, "review", Document.class);
+        if (review == null) {
+            return null;
+        }
+        return review.iterator().next();
+    }
+
+    /**
+     * 获取商品的评价平均分
+     *
+     * @param productId
+     * @return
+     */
+    public Document getAverageReviewRate(String productId) {
+        Aggregation aggregation = Aggregation.newAggregation(Aggregation.match(Criteria.where("product_id").is(productId)),
+                Aggregation.group("product_id").count().as("评价总数:").avg("rating").as("评价平均分："));
         AggregationResults<Document> review = mongoTemplate.aggregate(aggregation, "review", Document.class);
         if (review == null){
             return  null;
         }
-        return  review.iterator().next();
+        return review.iterator().next();
     }
 }

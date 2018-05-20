@@ -48,4 +48,9 @@ public class ReviewServiceImpl implements ReviewService {
     public Document getReviewCountByProductId(String productId) {
         return reviewMBDao.getReviewCountByProductId(productId);
     }
+
+    @Override
+    public Document getAverageReviewRate(String productId) {
+        return reviewMBDao.getAverageReviewRate(productId);
+    }
 }

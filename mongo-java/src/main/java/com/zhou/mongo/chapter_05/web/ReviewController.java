@@ -50,4 +50,13 @@ public class ReviewController {
     public Document getReviewCountByProductId(@RequestParam("productId")String productId){
         return reviewService.getReviewCountByProductId(productId);
     }
+
+    /**
+     * 获取商品的平均评分
+     * @return
+     */
+    @RequestMapping(value = "/getAverageReviewRate")
+    public Document getAverageReviewRate(@RequestParam(value = "productId")String productId){
+        return reviewService.getAverageReviewRate(productId);
+    }
 }

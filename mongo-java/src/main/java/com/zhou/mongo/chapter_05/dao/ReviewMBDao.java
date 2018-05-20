@@ -75,4 +75,23 @@ public class ReviewMBDao {
         }
         return review.iterator().next();
     }
+
+    /**
+     * 获取详细的产品评分细则
+     * @param productId
+     * @return
+     */
+    public JSONArray getDetailReviewByProductId(String productId) {
+        Aggregation aggregation = Aggregation.newAggregation(Aggregation.match(Criteria.where("product_id").is(productId)),Aggregation.group("rating").count().as("heji"));
+        AggregationResults<Document> review = mongoTemplate.aggregate(aggregation, "review", Document.class);
+        if (review == null){
+            return  null;
+        }
+        JSONArray jsonArray = new JSONArray();
+        Iterator<Document> iterator = review.iterator();
+        while (iterator.hasNext()){
+            jsonArray.add(iterator.next());
+        }
+        return jsonArray;
+    }
 }

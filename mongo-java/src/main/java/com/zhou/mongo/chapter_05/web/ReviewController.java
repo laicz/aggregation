@@ -59,4 +59,9 @@ public class ReviewController {
     public Document getAverageReviewRate(@RequestParam(value = "productId")String productId){
         return reviewService.getAverageReviewRate(productId);
     }
+
+    @RequestMapping(value = "/getDetailReviewByProductId")
+    public  JSONArray getDetailReviewByProductId(@RequestParam(value = "productId")String productId){
+        return reviewService.getDetailReviewByProductId(productId);
+    }
 }

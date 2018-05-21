@@ -26,4 +26,6 @@ public interface ReviewService {
     Document getAverageReviewRate(String productId);
 
     JSONArray getDetailReviewByProductId(String productId);
+
+    JSONArray getDetailReviewByUserId();
 }

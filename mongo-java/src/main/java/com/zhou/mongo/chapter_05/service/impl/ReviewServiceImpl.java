@@ -58,4 +58,9 @@ public class ReviewServiceImpl implements ReviewService {
     public JSONArray getDetailReviewByProductId(String productId) {
         return reviewMBDao.getDetailReviewByProductId(productId);
     }
+
+    @Override
+    public JSONArray getDetailReviewByUserId() {
+        return reviewMBDao.getDetailReviewByUserId();
+    }
 }

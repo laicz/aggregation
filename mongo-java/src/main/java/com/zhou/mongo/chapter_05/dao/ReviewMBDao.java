@@ -70,27 +70,47 @@ public class ReviewMBDao {
         Aggregation aggregation = Aggregation.newAggregation(Aggregation.match(Criteria.where("product_id").is(productId)),
                 Aggregation.group("product_id").count().as("评价总数:").avg("rating").as("评价平均分："));
         AggregationResults<Document> review = mongoTemplate.aggregate(aggregation, "review", Document.class);
-        if (review == null){
-            return  null;
+        if (review == null) {
+            return null;
         }
         return review.iterator().next();
     }
 
     /**
      * 获取详细的产品评分细则
+     *
      * @param productId
      * @return
      */
     public JSONArray getDetailReviewByProductId(String productId) {
-        Aggregation aggregation = Aggregation.newAggregation(Aggregation.match(Criteria.where("product_id").is(productId)),Aggregation.group("rating").count().as("heji"));
+        Aggregation aggregation = Aggregation.newAggregation(Aggregation.match(Criteria.where("product_id").is(productId)), Aggregation.group("rating").count().as("heji"));
         AggregationResults<Document> review = mongoTemplate.aggregate(aggregation, "review", Document.class);
-        if (review == null){
-            return  null;
+        if (review == null) {
+            return null;
         }
         JSONArray jsonArray = new JSONArray();
         Iterator<Document> iterator = review.iterator();
-        while (iterator.hasNext()){
+        while (iterator.hasNext()) {
             jsonArray.add(iterator.next());
+        }
+        return jsonArray;
+    }
+
+    /**
+     * 获取用户的详细评价信息
+     *
+     * @return
+     */
+    public JSONArray getDetailReviewByUserId() {
+        Aggregation aggregation = Aggregation.newAggregation(Aggregation.project("user_id","helpful_votes"),Aggregation.group("user_id").count().as("用户评价数量").avg("helpful_votes").as("平均帮助人数"));
+        AggregationResults<Document> documents = mongoTemplate.aggregate(aggregation, "review", Document.class);
+        if (documents == null) {
+            return null;
+        }
+        JSONArray jsonArray = new JSONArray();
+        Iterator<Document> iterator = documents.iterator();
+        while (iterator.hasNext()) {
+            jsonArray.add(JSON.parseObject(JSON.toJSONString(iterator.next())));
         }
         return jsonArray;
     }

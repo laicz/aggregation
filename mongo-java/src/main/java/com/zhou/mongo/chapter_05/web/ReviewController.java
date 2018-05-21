@@ -28,40 +28,57 @@ public class ReviewController {
     private ReviewService reviewService;
 
     @RequestMapping(value = "/getPreviewByProductId")
-    public List<Review> getReviewByProductId(@RequestParam("productId")String productId){
+    public List<Review> getReviewByProductId(@RequestParam("productId") String productId) {
         return reviewService.findReviewByProductId(productId);
     }
 
     /**
      * 获取所有的商品机评论数
+     *
      * @return
      */
     @RequestMapping(value = "/findAllProductReviewCount")
-    public JSONArray findAllProductReviewCount(){
+    public JSONArray findAllProductReviewCount() {
         return reviewService.findAllProductReviewCount();
     }
 
     /**
      * 获取某个商品的评价数量
+     *
      * @param productId
      * @return
      */
     @RequestMapping(value = "/getReviewCountByProductId")
-    public Document getReviewCountByProductId(@RequestParam("productId")String productId){
+    public Document getReviewCountByProductId(@RequestParam("productId") String productId) {
         return reviewService.getReviewCountByProductId(productId);
     }
 
     /**
      * 获取商品的平均评分
+     *
      * @return
      */
     @RequestMapping(value = "/getAverageReviewRate")
-    public Document getAverageReviewRate(@RequestParam(value = "productId")String productId){
+    public Document getAverageReviewRate(@RequestParam(value = "productId") String productId) {
         return reviewService.getAverageReviewRate(productId);
     }
 
+    /**
+     * 通过productId获取商品的详细评价信息（统计每各分数的评价）
+     * @param productId
+     * @return
+     */
     @RequestMapping(value = "/getDetailReviewByProductId")
-    public  JSONArray getDetailReviewByProductId(@RequestParam(value = "productId")String productId){
+    public JSONArray getDetailReviewByProductId(@RequestParam(value = "productId") String productId) {
         return reviewService.getDetailReviewByProductId(productId);
+    }
+
+    /**
+     * 统计每各用户的评价数量及有帮助的投票数
+     * @return
+     */
+    @RequestMapping(value = "/getDetailReviewByUserId")
+    public JSONArray getDetailReviewByUserId(){
+        return reviewService.getDetailReviewByUserId();
     }
 }

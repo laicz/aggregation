@@ -7,6 +7,8 @@ package com.zhou.mongo.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 /**
  * 商品订单文档
  * 2018/5/19  16:40
@@ -21,6 +23,15 @@ public class Order {
     private Item[] items;
     private ShipAddress ship_address;
     private Long sub_total;
+    private Date create_time;
+
+    public Date getCreate_time() {
+        return create_time;
+    }
+
+    public void setCreate_time(Date create_time) {
+        this.create_time = create_time;
+    }
 
     public String getId() {
         return id;

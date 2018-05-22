@@ -26,4 +26,9 @@ public class UserServiceImpl implements UserService{
     public List<User> saveAll(List<User> users){
         return  userMBRepository.saveAll(users);
     }
+
+    @Override
+    public List<User> getAllUser() {
+        return userMBRepository.findAll();
+    }
 }

@@ -17,4 +17,6 @@ public interface ProductService {
     Product findProductById(String id);
 
     boolean addProduct(List<Product> products);
+
+    List<Product> getAllProduct();
 }

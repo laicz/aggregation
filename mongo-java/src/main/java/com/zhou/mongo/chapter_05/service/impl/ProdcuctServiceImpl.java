@@ -49,4 +49,9 @@ public class ProdcuctServiceImpl implements ProductService {
         List<Product> productList = productMBRepository.saveAll(products);
         return productList.size() == products.size();
     }
+
+    @Override
+    public List<Product> getAllProduct() {
+        return productMBRepository.findAll();
+    }
 }

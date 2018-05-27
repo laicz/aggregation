@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/aggregation.iml" filepath="$PROJECT_DIR$/aggregation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-java8/base-java8.iml" filepath="$PROJECT_DIR$/base-java8/base-java8.iml" />
       <module fileurl="file://$PROJECT_DIR$/mongo-java/mongo-java.iml" filepath="$PROJECT_DIR$/mongo-java/mongo-java.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-jar-demo/spring-boot-jar-demo.iml" filepath="$PROJECT_DIR$/spring-boot-jar-demo/spring-boot-jar-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-jpa/spring-boot-jpa.iml" filepath="$PROJECT_DIR$/spring-boot-jpa/spring-boot-jpa.iml" />

@@ -14,6 +14,7 @@
         <option value="$PROJECT_DIR$/spring-boot-war-demo/pom.xml" />
         <option value="$PROJECT_DIR$/zz/pom.xml" />
         <option value="$PROJECT_DIR$/sso-cas/pom.xml" />
+        <option value="$PROJECT_DIR$/base-java8/pom.xml" />
       </list>
     </option>
   </component>

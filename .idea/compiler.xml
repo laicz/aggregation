@@ -9,25 +9,21 @@
         <module name="mongo-java" />
         <module name="spring-boot-jar-demo" />
         <module name="spring-boot-jpa" />
-        <module name="spring-boot-shiro" />
         <module name="spring-boot-synthesize" />
         <module name="spring-boot-war-demo" />
+        <module name="sso-cas" />
         <module name="zz" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="aggregation" target="1.5" />
       <module name="mongo-java" target="1.8" />
-      <module name="mongodb-action-java" target="1.5" />
       <module name="spring-boot-jar-demo" target="1.8" />
       <module name="spring-boot-jpa" target="1.8" />
-      <module name="spring-boot-shiro" target="1.8" />
       <module name="spring-boot-synthesize" target="1.8" />
-      <module name="spring-boot-thymeleaf" target="1.8" />
       <module name="spring-boot-war-demo" target="1.8" />
-      <module name="springbootthymeleaf" target="1.5" />
+      <module name="sso-cas" target="1.8" />
       <module name="zz" target="1.5" />
-      <module name="zz (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

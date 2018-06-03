@@ -1,0 +1,12 @@
+server:
+  port: 8765    #指定端口
+eureka:
+  client:
+    registerWithEureka: false #集群相互注册（注册到别的eureka上）
+    fetchRegistry: false      #合并别的eureka上
+    serviceUrl:
+     defaultZone: http://localhost:8765/eureka/
+  server:
+      enableSelfPreservation: false
+
+#参考文档 http://my.oschina.net/buwei/blog/618756

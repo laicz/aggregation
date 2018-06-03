@@ -7,6 +7,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="base-java8" />
+        <module name="cloud-demo" />
+        <module name="eureka-demo" />
+        <module name="eureka-provider" />
+        <module name="eureka-server" />
         <module name="mongo-java" />
         <module name="spring-boot-jar-demo" />
         <module name="spring-boot-jpa" />
@@ -17,8 +21,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="aggregation" target="1.5" />
+      <module name="aggregation" target="1.8" />
       <module name="base-java8" target="1.8" />
+      <module name="cloud-demo" target="1.8" />
+      <module name="demo" target="1.5" />
+      <module name="eureka-demo" target="1.8" />
+      <module name="eureka-provider" target="1.8" />
+      <module name="eureka-server" target="1.8" />
       <module name="mongo-java" target="1.8" />
       <module name="spring-boot-jar-demo" target="1.8" />
       <module name="spring-boot-jpa" target="1.8" />

@@ -15,6 +15,10 @@
         <option value="$PROJECT_DIR$/zz/pom.xml" />
         <option value="$PROJECT_DIR$/sso-cas/pom.xml" />
         <option value="$PROJECT_DIR$/base-java8/pom.xml" />
+        <option value="$PROJECT_DIR$/cloud-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-demo/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-provider/pom.xml" />
       </list>
     </option>
   </component>

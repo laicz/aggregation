@@ -1,0 +1,10 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8765/eureka/
+    healthcheck:
+      enabled: true
+  instance:
+    prefer-ip-address: true  #将自己的IP注册到eureka上
+server:
+  port: 8888

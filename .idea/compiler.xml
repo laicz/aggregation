@@ -11,6 +11,8 @@
         <module name="eureka-demo" />
         <module name="eureka-provider" />
         <module name="eureka-server" />
+        <module name="microservice-simple-consumer-movie" />
+        <module name="microservice-simple-provider-user" />
         <module name="mongo-java" />
         <module name="spring-boot-jar-demo" />
         <module name="spring-boot-jpa" />
@@ -28,6 +30,8 @@
       <module name="eureka-demo" target="1.8" />
       <module name="eureka-provider" target="1.8" />
       <module name="eureka-server" target="1.8" />
+      <module name="microservice-simple-consumer-movie" target="1.8" />
+      <module name="microservice-simple-provider-user" target="1.8" />
       <module name="mongo-java" target="1.8" />
       <module name="spring-boot-jar-demo" target="1.8" />
       <module name="spring-boot-jpa" target="1.8" />

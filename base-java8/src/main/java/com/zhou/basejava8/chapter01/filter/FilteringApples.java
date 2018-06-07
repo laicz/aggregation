@@ -27,6 +27,31 @@ public class FilteringApples {
             System.out.println(apple);
         });
 
+        //获取重量超过限设定值的
+        List<Apple> heavyApples = filterApples(inventory, FilteringApples::isHeavyApples);
+        heavyApples.stream().forEach(apple -> {
+            System.out.println(apple);
+        });
+
+        //在代码中灵活设置条件
+        List<Apple> green = filterApples(inventory, (Apple a) -> StringUtils.equals("green", a.getColor()));
+        green.stream().forEach(apple -> {
+            System.out.println(apple);
+        });
+
+        // [Apple{color='green', weight=80}, Apple{color='green', weight=155}]
+        List<Apple> greenApples2 = filterApples(inventory, (Apple a) -> "green".equals(a.getColor()));
+        System.out.println(greenApples2);
+
+        // [Apple{color='green', weight=155}]
+        List<Apple> heavyApples2 = filterApples(inventory, (Apple a) -> a.getWeight() > 150);
+        System.out.println(heavyApples2);
+
+        // []
+        List<Apple> weirdApples = filterApples(inventory, (Apple a) -> a.getWeight() < 80 ||
+                "brown".equals(a.getColor()));
+        System.out.println(weirdApples);
+
     }
 
     public static List<Apple> filterApples(List<Apple> inventory, Predicate<Apple> predicate){
@@ -41,6 +66,10 @@ public class FilteringApples {
 
     public static boolean isGreenApples(Apple apple){
         return StringUtils.equals("green",apple.getColor());
+    }
+
+    public static boolean isHeavyApples(Apple apple){
+        return apple.getWeight() > 150;
     }
 
     public static  class  Apple{
